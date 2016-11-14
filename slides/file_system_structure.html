@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<head>
+		<title>Struktura souboroveho systemu | Linux Kindergarden</title>
+		<link rel=stylesheet href="../css/style.css" />
+	</head>
+
+	<header>
+		<h1><a href=../index.html>Linux Kindergarden</a></h1>
+	</header>
+
+	<div class="content">
+	
+	<h2>Struktura souboroveho systemu</h2>
+	<h4>/bin</h4>	
+	<p>
+Zde jsou uloženy ty nejzákladnejší uživatelské programy. Ty predstavují nejminimálnejší sadu programu nutných k tomu, aby uživatel mohl
+systém používat. Jsou tu uloženy takové veci, jako je shell, príkazy souborového systému (ls, cp) a podobne. Adresár /bin se po
+nainstalování systému už zpravidla nemení. Pokud ano, tak obvykle jen z duvodu upgradu softwarových balícku.
+	</p>
+
+	<h4>/boot</h4>
+	<p>
+	Zde jsou soubory, které používá Linux Loader (LILO). I v tomto adresári se toho po nainstalování systému už moc nemení.
+	</p>
+
+<h4>/dev</h4>
+	Se všemi vecmi v Linuxu se zachází jako se soubory. Takže i s hadrwarovými zarízeními jako napr. sériovými porty, harddisky a scanery.
+Abychom mohli k temto zarízením pristupovat, musí být prítomen speciální soubor nazývaný "device node". Všechy "device nodes" jsou
+uloženy v adresári /dev. Zjistíte, že takhle je to udeláno ve vetšine operacních systému Unixového typu.
+
+<h4>/etc</h4>
+	V tomto adresári jsou uloženy systémové konfiguracní soubory. Všechno od konfigruacních souboru pro X Window, pres uživatelské
+databáze až po systémové startovací skripty je zde. Systémový administrátor se casem s tímto adresárem hodne sžije.
+
+<h4>/home</h4>
+	Linux je víceuživatelský operacní systém. Každému uživateli je v systému zrízen úcet a jedinecný adresár pro jeho osobní soubory. Tento
+adresár je nazýván jako uživateluv domovský (home). Adresár /home je používán jako defaultní lokace pro umístení uživatelských
+domovských adresáru.
+
+<h4>/lib</h4>
+	Zde jsou uloženy systémové knihovny, které jsou vyžadovány pro základní operace. Najdeme tu napríklad knihovnu jazyka C, dynamický
+zavadec, knihovnu ncurses, moduly jádra, atd.
+
+<h4>/lost+found</h4>
+	Pri startu systému probíhá i kontrola souborových systému na chyby. Jsou−li chyby zjišteny, spustí se program fsck, aby zjistil, zda pujdou
+opravit. Opravené cásti souborového systému jsou zapsány do adresáre /lost+found.
+	
+<h4>/mnt</h4>
+	Tento adresár je používán jako docasný prípojný bod (mount point) pro práci na pevných discích ci vyjímatelných médiích.
+
+<h4>/opt</h4>
+	Volitelné (optional) softwarové balícky. Hlavní myšlenkou pro /opt je, aby se každý softwarový balícek instaloval do
+/opt/<software package>, což usnadnuje jeho pozdejší odstranení. Slackware umístuje nejaké veci do /opt (napr. KDE dává do
+/opt/kde). I vy si mužete do /opt svobodne pridávat co chcete.
+
+<h4>/proc</h4>
+	Toto je velmi zvláštní adresár. Ve skutecnosti není cástí souborového systému, ale je virtuálním souborovým systémem, který poskytuje
+prístup k informacím jádra. Ruzné informace, které vám chce kernel dávat na vedomí, jsou vám dávány prostrednictvím "souboru" v
+adresári /proc. Rovež vy mužete zasílat informace do kernelu prostrednictvím nekterých techto "souboru". Vyzkoušejte si treba cat
+/proc/cpuinfo.
+
+<h4>/root</h4>
+	Správce systému − administrátor − je systému znám pod jménem "root". Rootuv domovský adresár je v /root místo v /home/root.
+Duvod k tomu je jednoduchý. Co kdyby /home byl na jiném diskovém oddílu než / a nemohl by být pripojen? Root by se mel prirozene
+prihlásit do systému a opravit tento problém. Kdyby byl jeho domovský adresár na poškozeném filesystému, asi by mu to prihlašování
+hodne zkomplikovalo.
+
+<h4>/sbin</h4>
+	Zde jsou programy, které muže spouštet jen root a nebo které jsou spoušteny v prubehu startu systému. Normální uživatelé nemohou
+spouštet programy z tohoto adresáre.
+
+<h4>/tmp</h4>
+	Místo pro umistování docasne existujících souboru. Všichni uživatelé mohou z tohoto adresáre císt i zapisovat do nej.
+
+<h4>/usr</h4>
+	Toto je nejvetší adresár v linuxovém systému. Všechno ostatní musí jít hezky sem: Programy, dokumentace, zdrojový kód kernelu a X
+Window systém. Vetšinu programu budete instalovat do tohoto adresáre.
+
+<h4>/var</h4>
+	Systémové logovací soubory, cache data a programové zámky jsou ukládány sem. Toto je adresár pro casto se menící data.
+
+	
+		<nav>
+			<ul>
+				<li><a href="">MAN</a></li>
+				<li><a href="">Struktura souborového systému</a></li>
+				<li><a href="">Vyhledávání souboru</a></li>
+			</ul>			
+		</nav>
+		
+	</div>
+	
+	<footer>
+		Powered by Linux enthusiasts: Lipo, Over, etc.
+	</footer>
+</body>	
+</html>

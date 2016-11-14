@@ -1,0 +1,68 @@
+/*style.css*/
+
+body{
+	font-family: tahoma;
+	padding: 0;
+	margin: 0;
+	background: #000;
+	color: #eee;
+}
+
+a{
+	color: white;
+}
+
+h1{
+	color: #7DB8E8;
+}
+
+h2{
+	color: white;
+	border-left: 5px solid #E3A35B;
+	padding-left: 10px;
+}
+
+h3{
+	color: white;
+	border-left: 5px solid #E35BDF;
+	padding-left: 10px;
+}
+
+footer, header{
+	text-align: center;
+	background: #111;
+	color: #7DB8E8;
+	padding: 0.5%;
+	margin: 0px;
+	border-bottom: 2px solid #222
+}
+
+.content{
+	min-height:100%;
+	max-width: 1280px;
+	margin: 0.5% auto;
+}
+
+footer{
+	width: 99%;
+	position: static;
+	bottom: 0;
+	height: 40px;
+	vertical-align: middle;
+}
+
+nav{
+	padding: 0.5%;
+	background: #111;
+}
+
+/*content*/
+
+.code{
+	font-family: lucida console;
+	color: #66ff66;
+	background: #111;
+	border: 2px solid #222;
+	margin: 10px;
+	padding: 10px;
+}
